@@ -6,7 +6,7 @@
 -Perform Real Time Drowsiness Detection
 
 USE CASES:
-1.Driver Monitoring Systems (DMS): The model can be integrated into DMS applications to detect drowsiness in drivers.
+1.Driver Monitoring Systems (DMS): The model can be integrated into DMS applications to detect drowsiness in drivers.</n>
 2.Workplace Safety: The model can be deployed in industries where worker fatigue poses a risk, such as transportation, manufacturing, or healthcare.
 3.Aviation Safety: Pilots often face long hours of concentration and fatigue during flights. 
 4.Security Systems: The model can be employed in security surveillance systems to detect drowsiness in personnel responsible for monitoring surveillance feeds. 
