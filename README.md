@@ -1,5 +1,5 @@
 # Drowsiness Detection using YOLO, Pytorch and Python
--Detect Objects from Images
+-Detect Objects from Images</n>
 -Detect Objects from Pre-Recorded Videos
 -Detect Objects in Real Time Using OpenCV
 -Fine Tuning a Drowsiness Model using YOLOv5 and PyTorch
