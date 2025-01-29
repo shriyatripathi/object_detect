@@ -1,24 +1,23 @@
-# Use an official Python runtime as a parent image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy the requirements.txt file into the container
+COPY requirements.txt .
 
-# Install system dependencies (OpenCV dependencies, etc.)
+# Install system dependencies and Jupyter
 RUN apt-get update && apt-get install -y \
     libsm6 libxext6 libxrender-dev \
-    && pip install opencv-python-headless \
-    && pip install tensorflow \
-    && pip install jupyter 
+    && pip install --no-cache-dir -r requirements.txt \
+    && pip install jupyter
 
-# Install Python dependencies from requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy the rest of your code into the container
+COPY . .
 
-# Expose port 8888 for Jupyter
+# Expose the port for Jupyter Notebook
 EXPOSE 8888
 
-# Command to run Jupyter Notebook when the container starts
-CMD ["jupyter", "notebook", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root"]
+# Run Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8888", "--allow-root"]
+
